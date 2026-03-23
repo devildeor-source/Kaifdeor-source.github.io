@@ -1,0 +1,90 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* Pure Matte Black */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns search bar to bottom */
+    align-items: center;
+    padding-bottom: 30px; /* Space from the bottom edge */
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+/* Centered "Hello" Text */
+#hello {
+    position: absolute;
+    top: 45%; /* Slightly above center for a balanced look */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none; /* User can't click it */
+}
+
+/* Search Bar Container */
+.searchContainer {
+    display: flex;
+    align-items: center;
+    background: #111; /* Dark background for the pill */
+    padding: 8px 15px;
+    border-radius: 50px;
+    width: 90%;
+    max-width: 500px;
+    gap: 10px;
+    border: 2px solid #00f7ff; /* The Cyan Border */
+    box-shadow: 0 0 15px #00f7ff7a; /* Soft Glow */
+}
+
+/* Search Input Box */
+.searchBox {
+    flex: 1;
+}
+
+.searchBox input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 5px;
+}
+
+/* Glowing Buttons */
+button {
+    background: #1a1a1a;
+    border: none;
+    color: white;
+    font-size: 18px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00f7ff; /* Neon Glow */
+}
+
+button:hover {
+    transform: scale(1.1);
+    color: #00f7ff;
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+/* Mic Active Animation (Optional for JS) */
+button.recording {
+    background: #ff0055;
+    box-shadow: 0 0 15px #ff0055;
+}
